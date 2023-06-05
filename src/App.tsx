@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import itemlist from "./components/ItemList";
+import ItemList from "./components/ItemList";
 
 function App() {
+    const items = [
+        {id:0, name: 'Камень бессмертных', price: 30000},
+        {id:1, name: 'Идеальный приз', price: 20000},
+        {id:2, name: 'Отличный приз', price: 5000000},
+        {id:3, name: 'Оружие знак луны', price: 15000000}
+    ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <ItemList title="Заголовок" list={items}/>
     </div>
   );
 }
